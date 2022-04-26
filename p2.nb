@@ -1,0 +1,40 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"a","=",RowBox[{"Input","[","\"Enter the Left end point:\"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"b","=",RowBox[{"Input","[","\"Enter the Right end Point:\"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"n","=",RowBox[{"Input","[","\"Enter the number of sub intervals\"","]"}]}],";"}],"\n",RowBox[
+{RowBox[{"h","=",RowBox[{RowBox[{"(",RowBox[{"b","-","a"}],")"}],"/","n"}]}],";"}],"\n",RowBox[
+{RowBox[{"y","=",RowBox[{"Table","[",RowBox[{RowBox[{"a","+",RowBox[{"i","*","h"}]}],",",RowBox[
+{"{",RowBox[{"i",",","1",",","n"}],"}"}]}],"]"}]}],";"}],"\n",RowBox[{RowBox[{RowBox[
+{"f","[","x","]"}],":=",RowBox[{"Log","[","x","]"}]}],";"}],"\n",RowBox[{RowBox[{"sumodd","=","0"}],";"}],"\n",RowBox[
+{RowBox[{"sumeven","=","0"}],";"}],"\n",RowBox[{RowBox[{"For","[",RowBox[{RowBox[
+{"i","=","1"}],",",RowBox[{"i","<","n"}],",",RowBox[{"i","+=","2"}],",",RowBox[{"sumodd","+=",RowBox[
+{RowBox[{"2","*",RowBox[{"f","[","x","]"}]}],"/.",RowBox[{"x","\[Rule]",RowBox[{"y","[",RowBox[
+{"[","i","]"}],"]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[{RowBox[{"For","[",RowBox[{RowBox[
+{"i","=","2"}],",",RowBox[{"i","<","n"}],",",RowBox[{"i","+=","2"}],",",RowBox[{"sumeven","+=",RowBox[
+{RowBox[{"2","*",RowBox[{"f","[","x","]"}]}],"/.",RowBox[{"x","\[Rule]",RowBox[{"y","[",RowBox[
+{"[","i","]"}],"]"}]}]}]}]}],"]"}],";"}],"\n",RowBox[{RowBox[{"sn","=",RowBox[{RowBox[
+{"(",RowBox[{"h","/","2"}],")"}],"*",RowBox[{"(",RowBox[{RowBox[{"(",RowBox[{RowBox[
+{"f","[","x","]"}],"/.",RowBox[{"x","\[Rule]","a"}]}],")"}],"+",RowBox[{"N","[","sumodd","]"}],"+",RowBox[
+{"N","[","sumeven","]"}],"+",RowBox[{"(",RowBox[{RowBox[{"f","[","x","]"}],"/.",RowBox[
+{"x","\[Rule]","b"}]}],")"}]}],")"}]}]}],";"}],"\n",RowBox[{"Print","[",RowBox[{"\"for n =\"",",","n",",","\"Trapozial estimate is\"",",","sn"}],"]"}],"\n",RowBox[
+{"in","=",RowBox[{"Integrate","[",RowBox[{RowBox[{"Log","[","x","]"}],",",RowBox[
+{"{",RowBox[{"x",",","4",",","5.2"}],"}"}]}],"]"}]}],"\n",RowBox[{"Print","[",RowBox[
+{"\"then true value is\"",",","in"}],"]"}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"absolute value is\"",",",RowBox[{"Abs","[",RowBox[{"sn","-","in"}],"]"}]}],"]"}],"\n"}]}],
+"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "aa3b1a8d-d9dd-4332-a22d-998f04bca156"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"for n =\"","\[InvisibleSpace]","10","\[InvisibleSpace]","\"Trapozial estimate is\"","\[InvisibleSpace]","0.38587793674575405`"}],
+SequenceForm["for n =",10,"Trapozial estimate is",0.38587793674575405`],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "3d4e92c4-14df-4b7e-a80e-04ae34532031"],Cell[
+BoxData[
+"1.827847408574681`",StandardForm],"Output",CellLabel -> "Out[13]= ",ExpressionUUID -> "0d644a2b-8e4a-4f0c-9587-bfeea9815265"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"then true value is\"","\[InvisibleSpace]","1.827847408574681`"}],
+SequenceForm["then true value is",1.827847408574681`],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "111021ac-7b10-4cbc-8100-401f1fe5aef5"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"absolute value is\"","\[InvisibleSpace]","1.4419694718289269`"}],SequenceForm[
+"absolute value is",1.4419694718289269`],Editable -> False],StandardForm],"Print",
+ExpressionUUID -> "4bb9e32a-4a98-44be-a68f-955713d41cbd"]},Open],ExpressionUUID -> "7fc47d0a-6a39-41d2-875c-7af20b656a7f"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "13. for Wolfram Cloud 1.62 (April 8, 2022)"]
