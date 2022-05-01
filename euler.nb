@@ -1,0 +1,75 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{RowBox[{RowBox[{RowBox[{"EulerMethod","[",RowBox[
+{"a0_",",","b0_",",","n0_",",","f_",",","alpha_"}],"]"}],":=","\[IndentingNewLine]",RowBox[
+{"Module","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"a","=","a0"}],",",RowBox[{"b","=","b0"}],",",RowBox[
+{"n","=","n0"}],",","h",",","ti"}],"}"}],",","\[IndentingNewLine]",RowBox[{RowBox[
+{"h","=",RowBox[{RowBox[{"(",RowBox[{"b","-","a"}],")"}],"/","n"}]}],";","\[IndentingNewLine]",RowBox[
+{"ti","=",RowBox[{"Table","[",RowBox[{RowBox[{"a","+",RowBox[{RowBox[{"(",RowBox[
+{"j","-","1"}],")"}],"*","h"}]}],",",RowBox[{"{",RowBox[{"j",",","1",",",RowBox[{"n","+","1"}]}],"}"}]}],"]"}]}],";","\[IndentingNewLine]",RowBox[
+{"wi","=",RowBox[{"Table","[",RowBox[{"0",",",RowBox[{"{",RowBox[{"n","+","1"}],"}"}]}],"]"}]}],";","\[IndentingNewLine]",RowBox[
+{RowBox[{"wi","[",RowBox[{"[","1","]"}],"]"}],"=","alpha"}],";","\[IndentingNewLine]",RowBox[
+{"OutputDetails","=",RowBox[{"{",RowBox[{"{",RowBox[{"0",",",RowBox[{"ti","[",RowBox[
+{"[","1","]"}],"]"}],",","alpha"}],"}"}],"}"}]}],";","\[IndentingNewLine]",RowBox[
+{"For","[",RowBox[{RowBox[{"i","=","1"}],",",RowBox[{"i","\[LessEqual]","n"}],",",RowBox[
+{"i","++"}],",","\[IndentingNewLine]",RowBox[{RowBox[{RowBox[{"wi","[",RowBox[{"[",RowBox[
+{"i","+","1"}],"]"}],"]"}],"=",RowBox[{RowBox[{"wi","[",RowBox[{"[","i","]"}],"]"}],"+",RowBox[
+{"h","*",RowBox[{"f","[",RowBox[{RowBox[{"ti","[",RowBox[{"[","i","]"}],"]"}],",",RowBox[
+{"wi","[",RowBox[{"[","i","]"}],"]"}]}],"]"}]}]}]}],";","\[IndentingNewLine]",RowBox[
+{"OutputDetails","=",RowBox[{"Append","[",RowBox[{"OutputDetails",",","\[IndentingNewLine]",RowBox[
+{"{",RowBox[{"i",",",RowBox[{"N","[",RowBox[{"ti","[",RowBox[{"[",RowBox[{"i","+","1"}],"]"}],"]"}],"]"}],",",RowBox[
+{"N","[",RowBox[{"wi","[",RowBox[{"[",RowBox[{"i","+","1"}],"]"}],"]"}],"]"}]}],"}"}]}],"]"}]}],";"}]}],"]"}],";","\[IndentingNewLine]",RowBox[
+{"Print","[",RowBox[{"NumberForm","[",RowBox[{RowBox[{"TableForm","[",RowBox[{"OutputDetails",",","\[IndentingNewLine]",RowBox[
+{"TableHeadings","\[Rule]",RowBox[{"{",RowBox[{"None",",",RowBox[{"{",RowBox[{"\"i\"",",","\"ti\"",",","\"wi\""}],"}"}]}],"}"}]}]}],"]"}],",","6"}],"]"}],"]"}],";","\[IndentingNewLine]",RowBox[
+{"Print","[",RowBox[{"\"Subinterval size h used=\"",",","h"}],"]"}],";"}]}],"\[IndentingNewLine]","]"}]}],";"}],"\[IndentingNewLine]",RowBox[
+{RowBox[{RowBox[{"f","[",RowBox[{"t_",",","x_"}],"]"}],":=",RowBox[{"1","+",RowBox[
+{"x","/","t"}]}]}],";"}],"\[IndentingNewLine]",RowBox[{RowBox[{"a","=","1"}],";",RowBox[
+{"b","=","6"}],";",RowBox[{"n","=","10"}],";",RowBox[{"alpha","=","1"}],";"}],"\[IndentingNewLine]",RowBox[
+{RowBox[{"EulerMethod","[",RowBox[{"a",",","b",",","10",",","f",",","alpha"}],"]"}],";"}]}]],
+"Input",CellLabel -> "In[13]:= ",ExpressionUUID -> "af506efc-89f1-4d41-8e5f-3cfedc82e0da"],Cell[
+BoxData[
+TagBox[TagBox[TagBox[GridBox[{{TagBox["\"i\"",HoldForm],TagBox["\"ti\"",HoldForm],TagBox[
+"\"wi\"",HoldForm]},{InterpretationBox[StyleBox["\"0\"",ShowStringCharacters -> False],
+0,Editable -> False],InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],
+1,Editable -> False],InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],
+1,Editable -> False]},{InterpretationBox[StyleBox["\"1\"",ShowStringCharacters -> False],
+1,Editable -> False],InterpretationBox[StyleBox["\"1.5\"",ShowStringCharacters -> False],
+1.5`,AutoDelete -> True],InterpretationBox[StyleBox["\"2.\"",ShowStringCharacters -> False],
+2.`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"2\"",ShowStringCharacters -> False],
+2,Editable -> False],InterpretationBox[StyleBox["\"2.\"",ShowStringCharacters -> False],
+2.`,AutoDelete -> True],InterpretationBox[StyleBox["\"3.16667\"",ShowStringCharacters -> False],
+3.1666666666666665`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"3\"",ShowStringCharacters -> False],
+3,Editable -> False],InterpretationBox[StyleBox["\"2.5\"",ShowStringCharacters -> False],
+2.5`,AutoDelete -> True],InterpretationBox[StyleBox["\"4.45833\"",ShowStringCharacters -> False],
+4.458333333333333`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"4\"",ShowStringCharacters -> False],
+4,Editable -> False],InterpretationBox[StyleBox["\"3.\"",ShowStringCharacters -> False],
+3.`,AutoDelete -> True],InterpretationBox[StyleBox["\"5.85\"",ShowStringCharacters -> False],
+5.85`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"5\"",ShowStringCharacters -> False],
+5,Editable -> False],InterpretationBox[StyleBox["\"3.5\"",ShowStringCharacters -> False],
+3.5`,AutoDelete -> True],InterpretationBox[StyleBox["\"7.325\"",ShowStringCharacters -> False],
+7.325`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"6\"",ShowStringCharacters -> False],
+6,Editable -> False],InterpretationBox[StyleBox["\"4.\"",ShowStringCharacters -> False],
+4.`,AutoDelete -> True],InterpretationBox[StyleBox["\"8.87143\"",ShowStringCharacters -> False],
+8.871428571428572`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"7\"",ShowStringCharacters -> False],
+7,Editable -> False],InterpretationBox[StyleBox["\"4.5\"",ShowStringCharacters -> False],
+4.5`,AutoDelete -> True],InterpretationBox[StyleBox["\"10.4804\"",ShowStringCharacters -> False],
+10.480357142857143`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"8\"",ShowStringCharacters -> False],
+8,Editable -> False],InterpretationBox[StyleBox["\"5.\"",ShowStringCharacters -> False],
+5.`,AutoDelete -> True],InterpretationBox[StyleBox["\"12.1448\"",ShowStringCharacters -> False],
+12.14484126984127`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"9\"",ShowStringCharacters -> False],
+9,Editable -> False],InterpretationBox[StyleBox["\"5.5\"",ShowStringCharacters -> False],
+5.5`,AutoDelete -> True],InterpretationBox[StyleBox["\"13.8593\"",ShowStringCharacters -> False],
+13.859325396825398`,AutoDelete -> True]},{InterpretationBox[StyleBox["\"10\"",ShowStringCharacters -> False],
+10,Editable -> False],InterpretationBox[StyleBox["\"6.\"",ShowStringCharacters -> False],
+6.`,AutoDelete -> True],InterpretationBox[StyleBox["\"15.6193\"",ShowStringCharacters -> False],
+15.61926406926407`,AutoDelete -> True]}},RowSpacings -> 1,ColumnSpacings -> 3,RowAlignments -> Baseline,
+ColumnAlignments -> Left,GridBoxDividers -> {"Columns" -> {{False}},"Rows" -> {False,True,{False},False}},
+ColumnAlignments -> Left],{None,OutputFormsDump`HeadedColumns}],Function[BoxForm`e$,
+TableForm[BoxForm`e$,TableHeadings -> {None,{"i","ti","wi"}}]]],Function[NumberForm[
+Slot[1],6]]],StandardForm],"Print",ExpressionUUID -> "56dd4209-dfdb-4d59-8b3a-3acc559e807a"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Subinterval size h used=\"","\[InvisibleSpace]",FractionBox[
+"1","2"]}],SequenceForm["Subinterval size h used=",Rational[1,2]],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "bab39088-af67-413e-8b80-d406a489a0ce"]},
+Open],ExpressionUUID -> "a41aa71a-343e-4a29-8fa1-0ff3365e8775"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "13. for Wolfram Cloud 1.62 (April 8, 2022)"]
